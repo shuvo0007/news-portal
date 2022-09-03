@@ -9,6 +9,7 @@ function displayCetagories(data) {
     const categoryDiv = document.createElement("div");
     categoryDiv.innerHTML = `
       <button onclick="categoryId('${list.category_id}')" class="text-lg p-5">${list.category_name}</button>
+      
       `;
     categorySection.appendChild(categoryDiv);
   }

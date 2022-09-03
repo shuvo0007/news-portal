@@ -9,13 +9,11 @@ function displayCards(data) {
   const itemSection = document.getElementById("card-item");
   itemSection.innerHTML = "";
   for (const item of itemDetails) {
+    
     const categoryDiv = document.createElement("div");
-    // categoryDiv.classList.add('m-5');
     categoryDiv.innerHTML = `
     <div class="flex m-5 bg-white rounded-xl p-7">
-      <div class="">
-        <img class="w-auto h-96 rounded-lg " src="${item.image_url}" alt="">
-      </div>
+        <img class="rounded-lg " src="${item.thumbnail_url}" alt="">
       <div>
         <div class="px-10">
           <h2 class="text-3xl font-semibold py-5">${item.title}</h2>
@@ -29,7 +27,9 @@ function displayCards(data) {
               </div>
             </div>
             <p class="text-2xl pt-5"><i class="fa-solid fa-eye"></i> ${item.total_view ? item.total_view : 'Not Found'}</p>
-            <button onclick="newsId('${item._id}')" class="text-4xl "><i class="fa-solid fa-arrow-right"></i></button>
+
+            <button onclick="newsId('${item._id}')" class="block text-4xl focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 text-center " type="button"><i class="fa-solid fa-arrow-right" ></i>
+            </button>
           </div>
         </div>
       </div>
