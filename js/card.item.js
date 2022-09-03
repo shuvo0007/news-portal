@@ -4,7 +4,6 @@ const categoryId = (id) => {
     .then((data) => displayCards(data));
 };
 
-const itemName = document.getElementById('categoryName');
 function displayCards(data) {
   let newsCount = 0;
   const countDiv = document.getElementById("newsCount");
@@ -18,8 +17,8 @@ function displayCards(data) {
       newsCount++;
       const categoryDiv = document.createElement("div");
       categoryDiv.innerHTML = `
-      <div class="flex m-5 bg-white rounded-xl p-7">
-        <img class="rounded-lg " src="${item.thumbnail_url}" alt="">
+      <div class="sm:flex sm:flex-row  m-5 bg-white rounded-xl sm:p-7 flex flex-col">
+        <img class="sm:rounded-lg rounded-xl" src="${item.thumbnail_url}" alt="">
         <div>
           <div class="px-10">
             <h2 class="text-3xl font-semibold py-5">${item.title}</h2>
@@ -64,7 +63,7 @@ function displayCards(data) {
   countDiv.innerText = newsCount;
 }
 
-
+const itemName = document.getElementById('categoryName');
 function categoryName(name){
   itemName.innerText = "";
   itemName.innerText = name;
