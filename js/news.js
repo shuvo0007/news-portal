@@ -32,8 +32,29 @@ function newsDetails(data) {
                   <div class="p-6 space-y-6">
                       <p class="text-base leading-relaxed text-gray-500 text-justify">
                       ${allNews.details}
-                          
                       </p>
+                      <div class="flex flex-row justify-evenly">
+                        <div class="flex">
+                          <img class="w-16 rounded-full " src="${
+                            allNews.author.img
+                          }" alt="">
+                          <div class="px-5">
+                          <p class="">${
+                            allNews.author.name
+                              ? allNews.author.name
+                              : "Not Found"
+                          }</p>
+                          <p class="">${
+                            allNews.author.published_date
+                              ? allNews.author.published_date.slice(0, 10)
+                              : "Not Found"
+                          }</p>
+                        </div>
+                      </div>
+                      <p class="pt-5"><i class="fa-solid fa-eye"></i> ${
+                        allNews.total_view ? allNews.total_view : "Not Found"
+                      }</p>
+                      </div>
                   </div>
                   <!-- Modal footer -->
                   <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 ">
