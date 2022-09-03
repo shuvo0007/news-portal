@@ -18,7 +18,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class=" bg-stone-100 mx-5">
     <!-- navigation bar  -->
     <nav class="p-10 rounded border-gray-200">
       <div
@@ -77,10 +77,121 @@
     </nav>
     <hr />
 
+    <!-- -------------------------Frequently ask question-------------------------- -->
+
+  <section class="px-2 pt-16 sm:pt-24 sm:px-16 md:px-48 md:py-5 ">
+    <div class="flex-row text-center md:mx-64">
+      <div>
+        <h5 class="font-bold text-4xl sm:text-3xl md:text-5xl">Frequently Asked Questions</h5>
+        
+      </div>
+
+      <!-- ----------------accordian------------- -->
+      <div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item rounded-none bg-white border-0 border-gray-200">
+            <h2 class="accordion-header mb-0 " id="flush-headingOne">
+              <button class="accordion-button
+                text-2xl 
+                relative
+                flex
+                items-center
+                w-full
+                py-4
+                px-5
+                text-left
+              bg-white
+                font-bold
+                border-2
+                my-5
+                rounded
+                transition
+                focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                aria-expanded="false" aria-controls="flush-collapseOne">
+                <span>What are the differences between 'VAR', 'LET' and 'CONST'?</span>
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse border-0 collapse show"
+              aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body p-7 text-left text-xl text-gray-500">The differences between var, let, and const variable declaration in JavaScript include: <br>
+                Variables declared with var and const are scoped to the immediate function body. <br>
+                Variables declared with the var keyword are hoisted. Hoisting means that the variable can be accessed in their enclosing scope even before they are declared. <br>
+                Variables declared with the let keyword are block-scoped, which means the variables will have scope to the immediate enclosing block.</div>
+            </div>
+          </div>
+
+
+          <div class="accordion-item rounded-none bg-white border-0 border-gray-200">
+            <h2 class="accordion-header mb-0" id="flush-headingTwo">
+              <button class="accordion-button
+                text-2xl
+              relative
+              flex
+              items-center
+              w-full
+              py-4
+              px-5
+             text-left
+            bg-white
+            font-bold
+              border-2
+              my-5
+              rounded
+              transition
+              focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                aria-expanded="false" aria-controls="flush-collapseTwo">
+                What are the differences between an 'ARROW FUNCTION' and a 'REGULAR FUNCTION'?
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse border-0 collapse" aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body p-7 text-left text-xl text-gray-500"><b>Regular functions</b> created using function declarations or expressions are constructible and callable. Since regular functions are constructible, they can be called using the new keyword. <br>
+                However, the <b>Arrow functions</b> are only callable and not constructible, i.e arrow functions can never be used as constructor functions.</div>
+            </div>
+          </div>
+
+
+          <div class="accordion-item border-l-0 border-r-0 border-b-0 rounded-none bg-white border border-gray-200">
+            <h2 class="accordion-header mb-0" id="flush-headingThree">
+              <button class="accordion-button
+                text-2xl
+              relative
+              flex
+              items-center
+              w-full
+              py-4
+              px-5
+             text-left
+            bg-white
+            font-bold
+              border-2
+              my-5
+              rounded
+              transition
+              focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                aria-expanded="false" aria-controls="flush-collapseThree">
+                What are the differences between 'MAP', 'FOR EACH', 'FILTER' and 'FIND'?
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body p-7 text-left text-xl text-gray-500">
+                <b>.map()</b> executes the same code on every element in an array and returns a new array with the updated elements.<br> 
+                <b>.forEach()</b> is used to execute the same code on every element in an array but does not change the array and it returns undefined.<br>
+                <b>.filter()</b> checks every element in an array to see if it meets a certain criteria and returns a new array with the elements that return truthy for the criteria. <br>
+                <b>.find()</b> When you want to select a single element from an array.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
     <footer class="p-10 flex justify-center">
       <p>Copyright 2021 Agamir Khobor</p>
     </footer>
 
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    
   </body>
 </html>
