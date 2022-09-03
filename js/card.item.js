@@ -29,17 +29,17 @@ function displayCards(data) {
                 <img class="w-16 rounded-full " src="${item.author.img}" alt="">
                 <div class="px-5">
                   <p class="text-2xl">${
-                    item.author.name ? item.author.name : "Not Found"
+                    item.author.name ? item.author.name : "No data found"
                   }</p>
                   <p class="text-2xl">${
                     item.author.published_date
                       ? item.author.published_date.slice(0, 10)
-                      : "Not Found"
+                      : "No data found"
                   }</p>
                 </div>
               </div>
               <p class="text-2xl pt-5"><i class="fa-solid fa-eye"></i> ${
-                item.total_view ? item.total_view : "Not Found"
+                item.total_view ? item.total_view : "No data found"
               }</p>
 
               <button onclick="newsId('${

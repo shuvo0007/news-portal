@@ -43,17 +43,17 @@ function newsDetails(data) {
                           <p class="">${
                             allNews.author.name
                               ? allNews.author.name
-                              : "Not Found"
+                              : "No data found"
                           }</p>
                           <p class="">${
                             allNews.author.published_date
                               ? allNews.author.published_date
-                              : "Not Found"
+                              : "No data found"
                           }</p>
                         </div>
                       </div>
                       <p class="pt-5"><i class="fa-solid fa-eye"></i> ${
-                        allNews.total_view ? allNews.total_view : "Not Found"
+                        allNews.total_view ? allNews.total_view : "No data found"
                       }</p>
                       </div>
                   </div>
