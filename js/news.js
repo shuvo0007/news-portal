@@ -3,6 +3,7 @@ function newsId(news_id) {
     .then((res) => res.json())
     .then((data) => newsDetails(data));
 }
+
 function hideModal() {
   const modal = document.getElementById("modalDiv");
   modal.classList.add("hidden");
@@ -46,7 +47,7 @@ function newsDetails(data) {
                           }</p>
                           <p class="">${
                             allNews.author.published_date
-                              ? allNews.author.published_date.slice(0, 10)
+                              ? allNews.author.published_date
                               : "Not Found"
                           }</p>
                         </div>
@@ -57,9 +58,8 @@ function newsDetails(data) {
                       </div>
                   </div>
                   <!-- Modal footer -->
-                  <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 ">
+                  <div class="flex justify-center items-center p-6 space-x-2 rounded-b border-t border-gray-200 ">
                       <button onclick="hideModal()" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">OK</button>
-                      
                   </div>
               </div>
           </div>
